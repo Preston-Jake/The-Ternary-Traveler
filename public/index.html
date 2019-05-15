@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Browserify Boilerplate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<header>
+    <h1>The Ternary Traveler</h1>
+    <h3>places</h3>
+    <nav id="nav_places">
+        <ul id="ul_places"></ul>
+    </nav>
+    <button id="btn_add_interest">Add Interest</button>
+</header>
+
+<body>
+    <div id="wrapper_interest_form">
+        <h2>Point Of Interest</h2>
+        <form id="form_interest">
+            <select id="poi_location"></select>
+            <input id="input_poi_name" type="text" placeholder="POI Name">
+            <textarea id="text_poi_description" cols="30" rows="10" placeholder="Description"></textarea>
+            <textarea id="text_poi_review" cols="30" rows="10" placeholder="Review"></textarea>
+            <input id="input_poi_cost" type="text" placeholder="Cost">
+            <input id="btn_submit_poi" type="submit">
+        </form>
+    </div>
+
+    <div id="wrapper_places"></div>
+
+    <script src="bundle.js"></script>
+</body>
+
+</html>
