@@ -5,7 +5,7 @@ function printInterest() {
         .then(interests => interests.map(buildInterest))
 }
 function buildInterest(int) {
-    // console.log(int)
+    console.log(int)
     const frag = document.createDocumentFragment();
     const divInt = document.createElement("div");
 
@@ -61,7 +61,10 @@ function buildInterest(int) {
     btnDel.textContent = "Delete";
     btnDel.setAttribute("class", "delete")
     btnDel.addEventListener("click", event => {
-        API.deleteCall("interests", int.id)
+        const confirm = window.confirm("Are you sure?")
+        if (confirm === true) {
+            API.deleteCall("interests", int.id)
+        }
     })
     divInt.appendChild(btnDel);
 
