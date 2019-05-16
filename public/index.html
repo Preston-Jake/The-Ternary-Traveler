@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Browserify Boilerplate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <header>
     <h1>The Ternary Traveler</h1>
-    <h3>places</h3>
     <nav id="nav_places">
+        <h3>Places</h3>
         <ul id="ul_places"></ul>
     </nav>
-    <button id="btn_add_interest">Add Interest</button>
 </header>
 
 <body>
+    <button id="btn_add_interest">Add Interest</button>
     <div id="wrapper_interest_form">
         <h2>Point Of Interest</h2>
         <form id="form_interest">
@@ -30,7 +32,6 @@
     </div>
 
     <div id="wrapper_places"></div>
-
     <script src="bundle.js"></script>
 </body>
 

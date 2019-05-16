@@ -3,9 +3,15 @@ import API from "./dbCalls"
 function printPlaces() {
     API.getCall("places").then(places => {
         // console.log(places)
-        places.map(buildPlacesNav)
-        places.map(buildPlacesDiv)
-        places.map(buildLocationSelect)
+        places.forEach(place => {
+            buildPlacesNav(place)
+        });
+        places.forEach(place => {
+            buildLocationSelect(place)
+        });
+        places.forEach(place => {
+            buildPlacesDiv(place)
+        });
     })
 }
 function buildPlacesNav(place) {
@@ -14,7 +20,9 @@ function buildPlacesNav(place) {
     const frag = document.createDocumentFragment();
     const placeLi = document.createElement("li")
     const link = document.createElement("a")
+    placeLi.setAttribute("class", "nav-item")
     link.setAttribute("href", `link_${place.id}`)
+    link.setAttribute("class", "nav-link")
     placeLi.appendChild(link)
     link.textContent = place.name
     frag.appendChild(placeLi)
