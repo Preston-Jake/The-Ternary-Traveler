@@ -3,9 +3,15 @@ import API from "./dbCalls"
 function printPlaces() {
     API.getCall("places").then(places => {
         // console.log(places)
-        places.map(buildPlacesNav)
-        places.map(buildPlacesDiv)
-        places.map(buildLocationSelect)
+        places.forEach(place => {
+            buildPlacesNav(place)
+        });
+        places.forEach(place => {
+            buildLocationSelect(place)
+        });
+        places.forEach(place => {
+            buildPlacesDiv(place)
+        });
     })
 }
 function buildPlacesNav(place) {
